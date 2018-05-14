@@ -298,6 +298,9 @@ class Anonymizer(object):
             setattr(obj, attname, replacement)
 
     def run(self, chunksize=2000, parallel=4):
+        if not settings.ANONYMIZATION_ENABLED:
+            print "Anonymization is not enabled"
+            return
         self.validate()
 
         if not self.replacers:
