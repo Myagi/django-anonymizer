@@ -299,7 +299,7 @@ class Anonymizer(object):
 
     def run(self, chunksize=2000, parallel=4):
         if not settings.ANONYMIZATION_ENABLED:
-            print "Anonymization is not enabled"
+            print("Anonymization is not enabled")
             return
         self.validate()
 
